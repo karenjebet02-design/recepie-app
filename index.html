@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Recipe Finder</title>
+  <link rel="stylesheet" href="css/styles.css" />
+
+</head>
+<body>
+  <header class="site-header">
+    <h1>Recipe Finder</h1>
+    <div class="controls">
+      <input id="search" type="search" placeholder="Search by name or ingredient..." aria-label="Search recipes" />
+      <select id="cuisineFilter" aria-label="Filter by cuisine">
+        <option value="">All cuisines</option>
+      </select>
+      <button id="showFavorites">Favorites</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="recipes" class="grid" aria-live="polite"></section>
+    <p id="noResults" class="muted" hidden>No recipes found.</p>
+  </main>
+
+  <!-- Modal for details -->
+  <div id="modal" class="modal" aria-hidden="true">
+    <div class="modal-content" role="dialog" aria-modal="true">
+      <button id="closeModal" class="close">×</button>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <footer class="site-footer">Built with ❤️ • Simple recipe finder</footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
